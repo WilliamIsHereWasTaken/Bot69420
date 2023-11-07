@@ -1,0 +1,50 @@
+const prefix = s!;
+const botname = Bot69420 ( + prefix + help);
+const version = 0.5.0;
+const update = November 2nd 2023;
+var help = __BonziBOT Commands__ns!help, s!say {TEXT}, s!joke, s!fact, s!botinfo, s!roominfo, s!image {IMAGE};
+var botinfo = BonziBOT Version  + version + . Updated  + update + . Find BonziBOT at httpspastebin.comX4irjqAh;
+ 
+function sendMsg(msg){
+    setTimeout(() = {
+        socket.emit(talk,{text msg});
+    },1100);
+}
+ 
+setTimeout(() = {socket.emit(command,{list[name,botname]})},1000);
+setTimeout(() = {socket.emit(command,{list[name,botname]})},2100);
+setTimeout(() = {socket.emit(command,{list[color,green]})},3200);
+setTimeout(() = {
+    sendMsg(BonziBOT is online. Type  + prefix + help to see commands.);
+    setInterval( () = {sendMsg(BonziBOT is online, type  + prefix + help to see commands.  BonziBOT Discord Server httpsdiscord.ggVFpnPe2vVe);},60000);
+},4300);
+ 
+socket.on(talk, (message) = {
+    if(message.text == prefix + roominfo){
+        sendMsg(Amount of users in the room  + window.usersAmt);
+    }
+    if(message.text == prefix + help){
+        sendMsg(help);
+    }
+    if(message.text == prefix + botinfo){
+        sendMsg(botinfo);
+    }
+    if(message.text.startsWith(prefix + say)){
+        sendMsg(message.text.substring(prefix.length + 3));
+    }
+    if(message.text.startsWith(o! + say)){
+        sendMsg(message.text.substring(prefix.length + 3));
+    }
+    if(message.text.startsWith(prefix + image)){
+        let imgUrl = message.text.substring(prefix.length + 6);
+        setTimeout(() = {socket.emit(command,{list[image,imgUrl]});},1100);
+    }
+    if(message.text == prefix + joke){
+        setTimeout(() = {socket.emit(command,{list[joke]});},1100);
+    }
+    if(message.text == prefix + fact){
+        setTimeout(() = {socket.emit(command,{list[fact]});},1100);
+    }
+});
+
+
